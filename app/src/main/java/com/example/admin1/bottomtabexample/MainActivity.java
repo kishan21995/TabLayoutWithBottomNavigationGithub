@@ -1,5 +1,6 @@
 package com.example.admin1.bottomtabexample;
 
+import android.annotation.SuppressLint;
 import android.support.annotation.NonNull;
 import android.support.design.internal.BottomNavigationItemView;
 import android.support.design.internal.BottomNavigationMenuView;
@@ -14,13 +15,16 @@ import android.view.MenuItem;
 import java.lang.reflect.Field;
 
 public class MainActivity extends AppCompatActivity {
+   /* @SuppressLint("RestrictedApi")*/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        BottomNavigationView bottomNavigationView = (BottomNavigationView)
-                findViewById(R.id.navigation);
-        BottomNavigationMenuView menuView = (BottomNavigationMenuView)
+
+
+        BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.navigation);
+
+        /*BottomNavigationMenuView menuView = (BottomNavigationMenuView)
                 bottomNavigationView.getChildAt(0);
         try {
             Field shiftingMode = menuView.getClass()
@@ -46,7 +50,11 @@ public class MainActivity extends AppCompatActivity {
 
         } catch (SecurityException e) {
             e.printStackTrace();
-        }
+        }*/
+
+
+
+
         BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
                 = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
